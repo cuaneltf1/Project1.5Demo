@@ -1,0 +1,81 @@
+<app-nav></app-nav>
+<br>
+<br>
+<div id="space"></div>
+<form class="form-assign-quest" (submit)="newQutoQ()">
+    <h1>Assign Question to Quiz</h1>
+    <h2>Quiz Id</h2>
+    <input type="number" id="inputQuizId" name="input-quiz-id" class="form-control" placeholder="1" required
+        autofocus [(ngModel)]="qutoqs.quiz_id">
+
+    <h2>Question Id</h2>
+    <input type="number" id="inputQuestId" name="input-quest-id" class="form-control" placeholder="1" required
+        autofocus [(ngModel)]="qutoqs.question_id">
+
+    <p id="error-message">{{errorMessage}}</p>
+    
+    <button type="submit">Assign Question</button>
+
+    <p>{{qutoqs.quiz_id}}</p>
+    <p>{{qutoqs.question_id}}</p>
+</form>
+<br>
+<h1>Quizzes</h1>
+<table class="table" id="quiz-table">
+    <thead>
+        <tr>
+            <th scope="col">Quiz Id</th>
+            <th scope="col">Quiz Title</th>
+            <th scope="col">Quiz Description</th>
+        </tr>
+    </thead>
+    <tbody id="quiz-table-body">
+        <tr *ngFor="let quiz of quizzes">
+            <td>{{quiz.quiz_id}}</td>
+            <td>{{quiz.quiz_title}}</td>
+            <td>{{quiz.quiz_description}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h1>Questions</h1>
+<table class="table" id="questions-table">
+    <thead>
+        <tr>
+            <th scope="col">Question Id</th>
+            <th scope="col">Question Description</th>
+            <th scope="col">Answer 1</th>
+            <th scope="col">Answer 2</th>
+            <th scope="col">Answer 3</th>
+            <th scope="col">Answer 4</th>
+        </tr>
+    </thead>
+    <tbody id="question-table-body">
+        <tr *ngFor="let question of questions">
+            <td>{{question.question_id}}</td>
+            <td>{{question.question_description}}</td>
+            <td>{{question.question_response_1}}</td>
+            <td>{{question.question_response_2}}</td>
+            <td>{{question.question_response_3}}</td>
+            <td>{{question.question_response_4}}</td>
+        </tr>
+    </tbody>
+</table>
+<br>
+<h1>Questions Assigned to Quizzes</h1>
+<table class="table" id="assigned-questions-table">
+    <thead>
+        <tr>
+            <th scope="col">Quiz Id</th>
+            <th scope="col">Question Id</th>
+            <th scope="col">Question Description</th>
+        </tr>
+    </thead>
+    <tbody id="question-table-body">
+        <tr *ngFor="let aqutoq of aqutoqs">
+            <td>{{aqutoq.quiz_id}}</td>
+            <td>{{aqutoq.question_id}}</td>
+            <td>{{aqutoq.question_description}}</td>
+        </tr>
+    </tbody>
+</table>

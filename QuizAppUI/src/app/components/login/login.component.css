@@ -1,0 +1,54 @@
+#space{
+    width: 98.75vw;
+    height: 97.75vh;
+    background-image: linear-gradient(to bottom right, #10c278, #5a0bc2);
+}
+
+form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+h1{
+    text-transform: uppercase;
+    font-size: 1.75em;
+    color: white;
+}
+
+input[type = "text"],input[type = "password"] {
+    border: 0;
+    background: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid white;
+    padding: 13px 10px;
+    width: 200px;
+    outline: white;
+    color: black;
+    border-radius: 13px;
+    background-color: white;
+  }
+
+  button[type = "submit"]{
+    border: 0;
+    background: 0;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid white;
+    padding: 14px 10px;
+    width: 100px;
+    outline: none;
+    color: white;
+    border-radius: 13px;
+    cursor: pointer;
+  }
+
+  p{
+    font-size: .75em;
+    color: white;
+  }

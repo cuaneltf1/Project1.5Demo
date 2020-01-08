@@ -1,0 +1,36 @@
+<app-hafh-nav></app-hafh-nav>
+<br>
+<br>
+<div id="home">
+<h1>Welcome to the QuizApp</h1>
+<p>As a user, you are able to 
+    <br>
+    <br>
+    <b>Take Quizzes assigned to you</b>
+    <br>
+    <br> as well as being able to 
+    <br>
+    <br>
+    <b>View the Results of every Quiz you take</b>
+</p>
+</div>
+<br>
+<div id="qandr">
+<h1>Assigned Quizzes</h1>
+<table class="table" id="assigned-quizzes-table">
+    <thead>
+        <tr>
+            <th scope="col">Quiz Title</th>
+            <th scope="col">Quiz Description</th>
+            <th scope="col">Result Grade</th>
+        </tr>
+    </thead>
+    <tbody id="assigned-quizzes-table-body">
+        <tr *ngFor="let uquizze of uquizzes">
+            <td>{{uquizze.quiz_title}}</td>
+            <td>{{uquizze.quiz_description}}</td>
+            <td>{{uquizze.results_grade}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

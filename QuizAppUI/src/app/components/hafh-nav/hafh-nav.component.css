@@ -1,0 +1,25 @@
+#nav{
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 10vh;
+    background: black;
+}
+li{
+    display: inline-block;
+    color: white;
+    margin-top: .25em;
+    margin-right: 1em;
+    font-size: 1.5em;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+.nav-link:hover{
+    background-color: white;
+    color: black;
+    padding: .5em;
+}

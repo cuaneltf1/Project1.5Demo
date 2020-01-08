@@ -1,0 +1,19 @@
+<app-nav></app-nav>
+<br>
+<br>
+<div id="space"></div>
+<form class="form-quiz-creation" (submit)="newQuiz()">
+    <h1>Quiz Creation</h1>
+    <input type="text" id="inputQuizTitle" name="input-quiz-title" class="form-control" placeholder="Quiz Title" required
+        autofocus [(ngModel)]="quizzes.quiz_title">
+
+    <input type="text" id="inputQuizDescription" name="input-quiz-desc" class="form-control" placeholder="Quiz Description"
+        required [(ngModel)]="quizzes.quiz_description">
+
+    <p id="error-message">{{errorMessage}}</p>
+
+    <button type="submit">Create Quiz</button>
+
+    <p>{{quizzes.quiz_title}}</p>
+    <p>{{quizzes.quiz_description}}</p>
+</form>
